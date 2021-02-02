@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MouseInput.cs" />
     <Compile Include="Assets\Scripts\MoveByMouse.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\PlayerSoZ.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

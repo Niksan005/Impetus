@@ -1,13 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - HealthBar
     - MoveByMouse
+    - PlayerSoZ
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
     - Mirror.NetworkManagerHUD
+    - Mirror.NetworkStartPosition
     - Mirror.TelepathyTransport
     - kcp2k.KcpTransport
     Unity.2D.Animation.Editor.dll:
@@ -19,6 +22,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
@@ -28,6 +32,13 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -57,9 +68,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11842}
     - Class: 114
+      Script: {instanceID: 11846}
+    - Class: 114
       Script: {instanceID: 11960}
     - Class: 114
       Script: {instanceID: 12232}
+    - Class: 114
+      Script: {instanceID: 12240}
+    - Class: 114
+      Script: {instanceID: 12324}
+    - Class: 114
+      Script: {instanceID: 13250}
+    - Class: 114
+      Script: {instanceID: 15346}
     - Class: 114
       Script: {instanceID: 15458}
     - Class: 114
@@ -67,7 +88,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15796}
     - Class: 114
+      Script: {instanceID: 16190}
+    - Class: 114
+      Script: {instanceID: 16256}
+    - Class: 114
       Script: {instanceID: 16366}
+    - Class: 114
+      Script: {instanceID: 21880}
+    - Class: 114
+      Script: {instanceID: 21912}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -77,6 +106,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     - Class: 19719996
       Script: {instanceID: 0}
@@ -1263,6 +1298,18 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 84f5abb5f65bf812b4a57231545a4128
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBar
+  - hash:
+      serializedVersion: 2
+      Hash: a0df0dc6ac19eed130ed9bda14da56b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerSoZ
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

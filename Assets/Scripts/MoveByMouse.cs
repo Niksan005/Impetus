@@ -7,10 +7,9 @@ using Mirror;
 public class MoveByMouse : NetworkBehaviour
 {
     public Tilemap map;
-    [SerializeReference]  private float movementSpeed;
     MouseInput mouseInput;
+    [SerializeReference]  private float movementSpeed;
     private Vector3 destination;
-    public GameObject CameraMountPoint;
 
     private void Awake()
     {
@@ -27,14 +26,8 @@ public class MoveByMouse : NetworkBehaviour
     void Start()
     {
         destination = transform.position;
-        mouseInput.Mouse.MouseClick.performed += _ => MouseClick();
-        if (isLocalPlayer)
-        {
-            Transform cameraTransform = Camera.main.gameObject.transform;  //Find main camera which is part of the scene instead of the prefab
-            cameraTransform.parent = CameraMountPoint.transform;  //Make the camera a child of the mount point
-            cameraTransform.position = CameraMountPoint.transform.position;  //Set position/rotation same as the mount point
-            cameraTransform.rotation = CameraMountPoint.transform.rotation;
-        }
+        mouseInput.Mouse.MouseClickRight.performed += _ => MouseClickRight();
+        mouseInput.Mouse.MouseClickLeft.performed += _ => MouseClickLeft();
     }
     void Update()
     {
@@ -44,10 +37,16 @@ public class MoveByMouse : NetworkBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
             }
+
+            //mouseInput.Mouse.MouseClickLeft.performed += ctx => MouseClickLeft();
         }
     }
 
-    private void MouseClick()
+    private void MouseClickLeft()
+    {
+
+    }
+    private void MouseClickRight()
     {
         Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
