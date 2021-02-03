@@ -13,7 +13,6 @@ public class HealthBar : NetworkBehaviour
         hpSlider.maxValue = health;
         hpSlider.value = health;
     }
-
     public void SetHealth(int health)
     {
         hpSlider.value = health;

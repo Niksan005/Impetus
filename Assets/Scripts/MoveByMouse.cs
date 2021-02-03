@@ -27,7 +27,6 @@ public class MoveByMouse : NetworkBehaviour
     {
         destination = transform.position;
         mouseInput.Mouse.MouseClickRight.performed += _ => MouseClickRight();
-        mouseInput.Mouse.MouseClickLeft.performed += _ => MouseClickLeft();
     }
     void Update()
     {
@@ -37,14 +36,7 @@ public class MoveByMouse : NetworkBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
             }
-
-            //mouseInput.Mouse.MouseClickLeft.performed += ctx => MouseClickLeft();
         }
-    }
-
-    private void MouseClickLeft()
-    {
-
     }
     private void MouseClickRight()
     {

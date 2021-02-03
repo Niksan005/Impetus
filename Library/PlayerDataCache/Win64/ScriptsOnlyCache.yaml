@@ -22,7 +22,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
@@ -66,37 +65,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 610}
     - Class: 114
-      Script: {instanceID: 11842}
+      Script: {instanceID: 11810}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11844}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 11962}
     - Class: 114
-      Script: {instanceID: 12240}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12242}
     - Class: 114
-      Script: {instanceID: 13250}
+      Script: {instanceID: 12326}
     - Class: 114
-      Script: {instanceID: 15346}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 15458}
+      Script: {instanceID: 13254}
     - Class: 114
-      Script: {instanceID: 15540}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 15796}
+      Script: {instanceID: 15352}
     - Class: 114
-      Script: {instanceID: 16190}
+      Script: {instanceID: 15464}
     - Class: 114
-      Script: {instanceID: 16256}
+      Script: {instanceID: 15546}
     - Class: 114
-      Script: {instanceID: 16366}
+      Script: {instanceID: 15802}
     - Class: 114
-      Script: {instanceID: 21880}
+      Script: {instanceID: 16196}
     - Class: 114
-      Script: {instanceID: 21912}
+      Script: {instanceID: 16370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -140,6 +139,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 0c05f2bfb402def3f0a85a62a2323c7f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
   - hash:
       serializedVersion: 2
       Hash: 699619b86d9359741a4f58540298c80b
@@ -412,6 +417,12 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
+      Hash: 3b30b42ea22dd733b8ee219a301fb68e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerSoZ
+  - hash:
+      serializedVersion: 2
       Hash: 1819ce053d46070dc0fa64957811d105
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Basic
@@ -620,6 +631,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
     className: InputSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 84f5abb5f65bf812b4a57231545a4128
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBar
   - hash:
       serializedVersion: 2
       Hash: 9b01b1d80bd3ecf4eaca45e1a22d444e
@@ -1252,12 +1269,6 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 0c05f2bfb402def3f0a85a62a2323c7f
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Slider
-  - hash:
-      serializedVersion: 2
       Hash: 880d064aa7bf32abd8295b0fe07bcc13
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
@@ -1298,18 +1309,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
-  - hash:
-      serializedVersion: 2
-      Hash: 84f5abb5f65bf812b4a57231545a4128
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HealthBar
-  - hash:
-      serializedVersion: 2
-      Hash: a0df0dc6ac19eed130ed9bda14da56b0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerSoZ
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

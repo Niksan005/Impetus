@@ -4,10 +4,13 @@ using UnityEngine;
 using Mirror;
 using System;
 using UnityEngine.Tilemaps;
+using System.Linq;
 
 public class PlayerSoZ : NetworkBehaviour
 {
+    public float damageRadius = 1.5f;
     public int maxHealth = 100;
+    [SyncVar]
     public int currentHealth;
     public HealthBar healthBar;
     public MouseInput mouseInput;
@@ -15,7 +18,7 @@ public class PlayerSoZ : NetworkBehaviour
     private void Awake()
     {
         mouseInput = new MouseInput();
-        mouseInput.Mouse.MouseClickLeft.performed += ctx => TakeDamage(20);
+        mouseInput.Mouse.MouseClickLeft.performed += ctx => DoDamage(20);
     }
     private void OnEnable()
     {
@@ -36,15 +39,42 @@ public class PlayerSoZ : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        healthBar.SetHealth(currentHealth);
     }
-
+    [Command]
     private void TakeDamage(int damage)
+    {
+        if (this.isServer)
+        {
+            this.currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            if (this.currentHealth <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
+    private void DoDamage(int damage)
     {
         if (this.isLocalPlayer)
         {
-        this.currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+            Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector2 playerPosition = this.transform.position;
+            if (!(Vector2.Distance(playerPosition, mousePosition) > damageRadius))
+            {
+                //this.TakeDamage(damage);
+                RaycastHit2D[] hitColliders = Physics2D.CircleCastAll(mousePosition, damageRadius, mousePosition);
+                foreach (var hitCollider in hitColliders.Where(x => x.transform.position != new Vector3(0, 0, 0) && x.transform.position != new Vector3(playerPosition.x, playerPosition.y, 0)))
+                {
+                    Debug.Log(hitCollider.transform.position);
+                    Debug.Log(hitCollider.collider.tag);
+                    if (hitCollider.collider.tag == this.tag)
+                    {
+
+                    }
+                }
+            }
         }
     }
 }

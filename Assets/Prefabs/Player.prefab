@@ -201,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  damageRadius: 1.5
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 8483829981510597346}
@@ -546,7 +547,6 @@ GameObject:
   - component: {fileID: 8483829981510597340}
   - component: {fileID: 8483829981510597347}
   - component: {fileID: 8483829981510597346}
-  - component: {fileID: 4719059722961933184}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -641,22 +641,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   hpSlider: {fileID: 8483829981510597347}
---- !u!114 &4719059722961933184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8483829981510597341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
 --- !u!1 &8483829982418141987
 GameObject:
   m_ObjectHideFlags: 0
