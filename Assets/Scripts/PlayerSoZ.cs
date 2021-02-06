@@ -14,6 +14,7 @@ public class PlayerSoZ : NetworkBehaviour
     public int currentHealth;
     public HealthBar healthBar;
     public MouseInput mouseInput;
+    private PlayerSoZ enemy;
 
     private void Awake()
     {
@@ -41,18 +42,30 @@ public class PlayerSoZ : NetworkBehaviour
     {
         healthBar.SetHealth(currentHealth);
     }
-    [Command]
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        if (this.isServer)
-        {
+        if (isServer)
+            RpcTakeDamage(damage);
+        else
+            CmdTakeDamage(damage);
+    }
+    [Command(ignoreAuthority = true)]
+    public void CmdTakeDamage(int damage)
+    {
+        RpcTakeDamage(damage);
+    }
+    [ClientRpc]
+    private void RpcTakeDamage(int damage)
+    {
+        //if (this.isServer)
+        //{
             this.currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
             if (this.currentHealth <= 0)
             {
                 Destroy(this.gameObject);
             }
-        }
+        //}
     }
     private void DoDamage(int damage)
     {
@@ -61,17 +74,20 @@ public class PlayerSoZ : NetworkBehaviour
             Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             Vector2 playerPosition = this.transform.position;
-            if (!(Vector2.Distance(playerPosition, mousePosition) > damageRadius))
+
+            if (Vector2.Distance(playerPosition, mousePosition) <= damageRadius)
             {
                 //this.TakeDamage(damage);
                 RaycastHit2D[] hitColliders = Physics2D.CircleCastAll(mousePosition, damageRadius, mousePosition);
-                foreach (var hitCollider in hitColliders.Where(x => x.transform.position != new Vector3(0, 0, 0) && x.transform.position != new Vector3(playerPosition.x, playerPosition.y, 0)))
+                foreach (var hitCollider in hitColliders.Where(x => x.transform.position != new Vector3(0, 0, 0) && x.transform.position != this.transform.position))
                 {
                     Debug.Log(hitCollider.transform.position);
                     Debug.Log(hitCollider.collider.tag);
                     if (hitCollider.collider.tag == this.tag)
                     {
-
+                        enemy = hitCollider.collider.GetComponent<PlayerSoZ>();
+                        Debug.Log(enemy.tag);
+                        enemy.TakeDamage(20);
                     }
                 }
             }
