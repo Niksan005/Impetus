@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraFollow
     - HealthBar
     - MoveByMouse
     - PlayerSoZ
@@ -11,8 +12,9 @@ ScriptsOnlyBuild:
     - Mirror.NetworkManager
     - Mirror.NetworkManagerHUD
     - Mirror.NetworkStartPosition
-    - Mirror.TelepathyTransport
     - kcp2k.KcpTransport
+    SimpleWebTransport.dll:
+    - Mirror.SimpleWeb.SimpleWebTransport
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -67,8 +69,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11810}
     - Class: 114
-      Script: {instanceID: 11844}
-    - Class: 114
       Script: {instanceID: 11848}
     - Class: 114
       Script: {instanceID: 11962}
@@ -83,6 +83,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13254}
     - Class: 114
+      Script: {instanceID: 13354}
+    - Class: 114
       Script: {instanceID: 13530}
     - Class: 114
       Script: {instanceID: 15352}
@@ -96,6 +98,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 16196}
     - Class: 114
       Script: {instanceID: 16370}
+    - Class: 114
+      Script: {instanceID: 22106}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1309,6 +1313,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
+  - hash:
+      serializedVersion: 2
+      Hash: ed2aa711132a2c36dcfefeef3a717b71
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

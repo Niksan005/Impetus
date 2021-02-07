@@ -36,6 +36,10 @@ public class PlayerSoZ : NetworkBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
+    public override void OnStartLocalPlayer()
+    {
+        Camera.main.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+    }
 
     // Update is called once per frame
     void Update()
