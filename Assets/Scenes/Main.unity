@@ -34917,7 +34917,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532961502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
   m_Name: 
@@ -34950,7 +34950,7 @@ MonoBehaviour:
   serverTickRate: 30
   offlineScene: 
   onlineScene: 
-  transport: {fileID: 1532961504}
+  transport: {fileID: 1532961508}
   networkAddress: localhost
   maxConnections: 4
   disconnectInactiveConnections: 0
@@ -34999,7 +34999,7 @@ MonoBehaviour:
   clientUseWss: 0
   sslEnabled: 0
   sslCertJson: ./cert.json
-  sslProtocols: 3072
+  sslProtocols: 0
   _logLevels: 0
 --- !u!1 &2081755244
 GameObject:

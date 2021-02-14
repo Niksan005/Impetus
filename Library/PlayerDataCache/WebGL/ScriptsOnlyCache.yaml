@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraFollow
     - HealthBar
     - MoveByMouse
     - PlayerSoZ
@@ -86,17 +87,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 15352}
+      Script: {instanceID: 15354}
     - Class: 114
-      Script: {instanceID: 15464}
+      Script: {instanceID: 15466}
     - Class: 114
-      Script: {instanceID: 15546}
+      Script: {instanceID: 15548}
     - Class: 114
-      Script: {instanceID: 15802}
+      Script: {instanceID: 15804}
     - Class: 114
-      Script: {instanceID: 16196}
+      Script: {instanceID: 16136}
     - Class: 114
-      Script: {instanceID: 16370}
+      Script: {instanceID: 16200}
+    - Class: 114
+      Script: {instanceID: 16374}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1042,6 +1045,12 @@ ScriptsOnlyBuild:
     className: NetworkRoomManagerExt
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Test
+  - hash:
+      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1226,6 +1235,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: ed2aa711132a2c36dcfefeef3a717b71
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow
   - hash:
       serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
