@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using System.Net;
 using System.Net.Sockets;
+using UnityEngine.SceneManagement;
+using Mirror;
 
 public class Client : MonoBehaviour
 {
@@ -52,6 +54,7 @@ public class Client : MonoBehaviour
 
             receiveBuffer = new byte[dataBufferSize];
             socket.BeginConnect(instance.ip, instance.port, ConnectCallback, socket);
+            SceneManager.LoadScene(1);
         }
 
         private void ConnectCallback(IAsyncResult result)

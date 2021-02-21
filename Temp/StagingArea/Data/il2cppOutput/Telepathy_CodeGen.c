@@ -173,8 +173,8 @@ static const int32_t s_InvokerIndices[47] =
 	800,
 	135,
 	394,
-	1442,
 	1443,
+	1444,
 	23,
 	3,
 	3,
@@ -192,7 +192,7 @@ static const int32_t s_InvokerIndices[47] =
 	32,
 	30,
 	23,
-	1444,
+	1445,
 	34,
 	30,
 	23,
@@ -218,7 +218,7 @@ static const Il2CppRGCTXDefinition s_rgctxValues[7] =
 	{ (Il2CppRGCTXDataType)3, 20806 },
 	{ (Il2CppRGCTXDataType)3, 20807 },
 	{ (Il2CppRGCTXDataType)3, 20808 },
-	{ (Il2CppRGCTXDataType)2, 13954 },
+	{ (Il2CppRGCTXDataType)2, 13956 },
 	{ (Il2CppRGCTXDataType)3, 20809 },
 };
 extern const Il2CppCodeGenModule g_TelepathyCodeGenModule;

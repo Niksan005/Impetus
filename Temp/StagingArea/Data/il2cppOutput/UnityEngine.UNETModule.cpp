@@ -101,7 +101,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1F4F8DCA94A6832B1312A4D1589F77B40D6B6BA1
 IL2CPP_EXTERN_C String_t* _stringLiteral317EE74AF038EFA1EFB835A1A142AD358C5939C3;
 IL2CPP_EXTERN_C String_t* _stringLiteral4DB1A45BB662D79231E9447F2CBFDE3B6CE19D71;
 IL2CPP_EXTERN_C String_t* _stringLiteral572189F4EA97569D6C0D3A4A68C98F20D9FC95A5;
+IL2CPP_EXTERN_C String_t* _stringLiteral574AF626B2ECA36F40D5D593643BB7683F9514E2;
 IL2CPP_EXTERN_C String_t* _stringLiteral5A068CD5BEF2AF2FF0E3642874366761954C834B;
+IL2CPP_EXTERN_C String_t* _stringLiteral875CF8A46A6E3F0725287DAF52B09AF91CB77C71;
+IL2CPP_EXTERN_C String_t* _stringLiteral876C4B39B6E4D0187090400768899C71D99DE90D;
 IL2CPP_EXTERN_C String_t* _stringLiteral9CB64D4DAF8CDF7B5A2130FCCDD62ECE720AFE8E;
 IL2CPP_EXTERN_C String_t* _stringLiteralC94B47F32002FEDF4A271879FE7A0BC4157B2A6F;
 IL2CPP_EXTERN_C String_t* _stringLiteralCDBC178854E256F8C61DC4C296BB7F91494D0D08;
@@ -135,9 +138,11 @@ IL2CPP_EXTERN_C const uint32_t ConnectionConfig__ctor_mCB0E2B50103AB6B3917758DC5
 IL2CPP_EXTERN_C const uint32_t HostTopology__ctor_m402906F2EFF083571541B3EDED1729CA3FDB6244_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t HostTopology__ctor_mA0D7BC0F1CC6956ABFBDAC61941B38E75B00D87D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t NetworkTransport_AddHost_mEBF87FF57C336EC3EB6A2F69575172A71620B5CE_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t NetworkTransport_Connect_mAB9436F3762B46F3078AD6BC36AA49BD5E598588_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t NetworkTransport_Receive_mC6C0C2677D78E1D3DB7F0EE02A8AC913E978A850_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t NetworkTransport__cctor_mDB08DB01C3DE3EDE771ACE7C805808E30E306F9E_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t UNETWebSocketLib_AddHost_m781C03B8995655731659C92DE116B5DD32CFD319_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t UNETWebSocketLib_Connect_mDE433E1886D4BF53E5E82FCB323D65067AB06D82_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t UNETWebSocketLib_Receive_m1B51EBFC89615382326C16A8AEBEDB7E64EBB524_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t UNETWebSocketLib_Stop_mC777FE452D8EBE045FDFBF50C5B6A8D3DD8000D8_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t UNETWebSocketLib__cctor_m063AC486D02C5472949CC6E9854CB14B64BA199C_MetadataUsageId;
@@ -2400,6 +2405,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionConfig__ctor_m1976654A083CE2C1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * UNETWebSocketLib_get_Instance_m39058E5C043D0E2AA1034C6443A561F67DE85A50 (const RuntimeMethod* method);
 // System.Int32 UnityEngine.Networking.UNETWebSocketLib::AddHost(UnityEngine.Networking.HostTopology,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_AddHost_m781C03B8995655731659C92DE116B5DD32CFD319 (UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * __this, HostTopology_t268779309BB2D69F29D1A182662C79818813892B * ___topology0, int32_t ___port1, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Networking.UNETWebSocketLib::Connect(System.Int32,System.String,System.Int32,System.Int32,System.Byte&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_Connect_mDE433E1886D4BF53E5E82FCB323D65067AB06D82 (UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * __this, int32_t ___hostId0, String_t* ___ip1, int32_t ___port2, int32_t ___exeptionConnectionId3, uint8_t* ___error4, const RuntimeMethod* method);
 // UnityEngine.Networking.NetworkEventType UnityEngine.Networking.UNETWebSocketLib::Receive(System.Int32&,System.Int32&,System.Int32&,System.Byte[],System.Int32,System.Int32&,System.Byte&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_Receive_m1B51EBFC89615382326C16A8AEBEDB7E64EBB524 (UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * __this, int32_t* ___hostId0, int32_t* ___connectionId1, int32_t* ___channelId2, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer3, int32_t ___bufferSize4, int32_t* ___receivedSize5, uint8_t* ___error6, const RuntimeMethod* method);
 // UnityEngine.Networking.ConnectionConfig UnityEngine.Networking.HostTopology::get_DefaultConfig()
@@ -2410,6 +2417,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t ConnectionConfig_get_PacketSize_mF11
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t ConnectionConfig_get_PingTimeout_mC060D30B64D197917007D81E2DE93C3A85B2E601 (ConnectionConfig_t9ED47EBC3397BFD65CEE4D075D9A63566743600A * __this, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_AddHost(System.UInt32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_JS_UNETWebSockets_AddHost_m21BEE14DF3493086AD4BAE6CD4808C160536CDE2 (uint32_t ___pingTimeout0, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_IsHostReadyToConnect(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UNETWebSocketLib_JS_UNETWebSockets_IsHostReadyToConnect_m0AD6D63F6812047D8B902AC0C03C4FD328225194 (int32_t ___hostId0, const RuntimeMethod* method);
+// System.Boolean System.String::StartsWith(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_StartsWith_mDE2FF98CAFFD13F88EDEB6C40158DDF840BFCF12 (String_t* __this, String_t* ___value0, const RuntimeMethod* method);
+// System.String System.Int32::ToString()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411 (int32_t* __this, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44 (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String,System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m37A5BF26F8F8F1892D60D727303B23FB604FEE78 (String_t* ___str00, String_t* ___str11, String_t* ___str22, String_t* ___str33, const RuntimeMethod* method);
+// System.Void UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_SocketCreate(System.Int32,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UNETWebSocketLib_JS_UNETWebSockets_SocketCreate_mA390F21276D1075F12E24F33ED0D46C93A3E592F (int32_t ___hostId0, String_t* ___url1, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_SocketRecvEvntType()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_JS_UNETWebSockets_SocketRecvEvntType_m790BC7DBA73A6E500B5AAC34FE3A188210863A31 (const RuntimeMethod* method);
 // System.Int32 UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_SocketRecvEvntHost()
@@ -2428,12 +2447,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UNETWebSocketLib_JS_UNETWebSockets_Socke
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UNETWebSocketLib_Stop_mC777FE452D8EBE045FDFBF50C5B6A8D3DD8000D8 (UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Networking.UNETWebSocketLib::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UNETWebSocketLib__ctor_mB9481B94B46CAA691545EED0A6CC8FBAA53E29B6 (UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * __this, const RuntimeMethod* method);
+IL2CPP_EXTERN_C void DEFAULT_CALL JS_UNETWebSockets_SocketCreate(int32_t, char*);
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL JS_UNETWebSockets_SocketRecvEvntHost();
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL JS_UNETWebSockets_SocketRecvEvntType();
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL JS_UNETWebSockets_SocketRecvEvntBuffLength();
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL JS_UNETWebSockets_SocketRecvEvntBuff(uint8_t*, int32_t);
 IL2CPP_EXTERN_C void DEFAULT_CALL JS_UNETWebSockets_SocketCleanEvnt();
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL JS_UNETWebSockets_AddHost(uint32_t);
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL JS_UNETWebSockets_IsHostReadyToConnect(int32_t);
 IL2CPP_EXTERN_C void DEFAULT_CALL JS_UNETWebSockets_SocketStop();
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -3224,6 +3245,35 @@ IL_0010:
 		return L_4;
 	}
 }
+// System.Int32 UnityEngine.Networking.NetworkTransport::Connect(System.Int32,System.String,System.Int32,System.Int32,System.Byte&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NetworkTransport_Connect_mAB9436F3762B46F3078AD6BC36AA49BD5E598588 (int32_t ___hostId0, String_t* ___address1, int32_t ___port2, int32_t ___exeptionConnectionId3, uint8_t* ___error4, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (NetworkTransport_Connect_mAB9436F3762B46F3078AD6BC36AA49BD5E598588_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349_il2cpp_TypeInfo_var);
+		UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * L_0 = UNETWebSocketLib_get_Instance_m39058E5C043D0E2AA1034C6443A561F67DE85A50(/*hidden argument*/NULL);
+		int32_t L_1 = ___hostId0;
+		String_t* L_2 = ___address1;
+		int32_t L_3 = ___port2;
+		int32_t L_4 = ___exeptionConnectionId3;
+		uint8_t* L_5 = ___error4;
+		int32_t L_6 = UNETWebSocketLib_Connect_mDE433E1886D4BF53E5E82FCB323D65067AB06D82(L_0, L_1, L_2, L_3, L_4, (uint8_t*)L_5, /*hidden argument*/NULL);
+		V_0 = L_6;
+		goto IL_0014;
+	}
+
+IL_0014:
+	{
+		int32_t L_7 = V_0;
+		return L_7;
+	}
+}
 // UnityEngine.Networking.NetworkEventType UnityEngine.Networking.NetworkTransport::Receive(System.Int32&,System.Int32&,System.Int32&,System.Byte[],System.Int32,System.Int32&,System.Byte&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NetworkTransport_Receive_mC6C0C2677D78E1D3DB7F0EE02A8AC913E978A850 (int32_t* ___hostId0, int32_t* ___connectionId1, int32_t* ___channelId2, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer3, int32_t ___bufferSize4, int32_t* ___receivedSize5, uint8_t* ___error6, const RuntimeMethod* method)
 {
@@ -3300,6 +3350,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkTransport__cctor_mDB08DB01C3DE3ED
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_SocketCreate(System.Int32,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UNETWebSocketLib_JS_UNETWebSockets_SocketCreate_mA390F21276D1075F12E24F33ED0D46C93A3E592F (int32_t ___hostId0, String_t* ___url1, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (int32_t, char*);
+
+	// Marshaling of parameter '___url1' to native representation
+	char* ____url1_marshaled = NULL;
+	____url1_marshaled = il2cpp_codegen_marshal_string(___url1);
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(JS_UNETWebSockets_SocketCreate)(___hostId0, ____url1_marshaled);
+
+	// Marshaling cleanup of parameter '___url1' native representation
+	il2cpp_codegen_marshal_free(____url1_marshaled);
+	____url1_marshaled = NULL;
+
+}
 // System.Int32 UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_SocketRecvEvntHost()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_JS_UNETWebSockets_SocketRecvEvntHost_m8958637AF9278BBB2042E9FAFB6C45685241CF64 (const RuntimeMethod* method)
 {
@@ -3365,6 +3432,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_JS_UNETWebSockets_Ad
 	int32_t returnValue = reinterpret_cast<PInvokeFunc>(JS_UNETWebSockets_AddHost)(___pingTimeout0);
 
 	return returnValue;
+}
+// System.Boolean UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_IsHostReadyToConnect(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UNETWebSocketLib_JS_UNETWebSockets_IsHostReadyToConnect_m0AD6D63F6812047D8B902AC0C03C4FD328225194 (int32_t ___hostId0, const RuntimeMethod* method)
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (int32_t);
+
+	// Native function invocation
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(JS_UNETWebSockets_IsHostReadyToConnect)(___hostId0);
+
+	return static_cast<bool>(returnValue);
 }
 // System.Void UnityEngine.Networking.UNETWebSocketLib::JS_UNETWebSockets_SocketStop()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UNETWebSocketLib_JS_UNETWebSockets_SocketStop_m862DEC32A9EB246C21377592F16423AA87B62786 (const RuntimeMethod* method)
@@ -3460,6 +3537,103 @@ IL_003b:
 	{
 		int32_t L_11 = V_1;
 		return L_11;
+	}
+}
+// System.Int32 UnityEngine.Networking.UNETWebSocketLib::Connect(System.Int32,System.String,System.Int32,System.Int32,System.Byte&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UNETWebSocketLib_Connect_mDE433E1886D4BF53E5E82FCB323D65067AB06D82 (UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349 * __this, int32_t ___hostId0, String_t* ___ip1, int32_t ___port2, int32_t ___exeptionConnectionId3, uint8_t* ___error4, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UNETWebSocketLib_Connect_mDE433E1886D4BF53E5E82FCB323D65067AB06D82_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	bool V_1 = false;
+	int32_t V_2 = 0;
+	bool V_3 = false;
+	int32_t G_B5_0 = 0;
+	{
+		int32_t L_0 = ___hostId0;
+		IL2CPP_RUNTIME_CLASS_INIT(UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349_il2cpp_TypeInfo_var);
+		bool L_1 = UNETWebSocketLib_JS_UNETWebSockets_IsHostReadyToConnect_m0AD6D63F6812047D8B902AC0C03C4FD328225194(L_0, /*hidden argument*/NULL);
+		V_1 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
+		bool L_2 = V_1;
+		if (!L_2)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		uint8_t* L_3 = ___error4;
+		*((int8_t*)L_3) = (int8_t)1;
+		V_2 = 0;
+		goto IL_0079;
+	}
+
+IL_0017:
+	{
+		V_0 = (String_t*)NULL;
+		String_t* L_4 = ___ip1;
+		bool L_5 = String_StartsWith_mDE2FF98CAFFD13F88EDEB6C40158DDF840BFCF12(L_4, _stringLiteral875CF8A46A6E3F0725287DAF52B09AF91CB77C71, /*hidden argument*/NULL);
+		if (L_5)
+		{
+			goto IL_0033;
+		}
+	}
+	{
+		String_t* L_6 = ___ip1;
+		bool L_7 = String_StartsWith_mDE2FF98CAFFD13F88EDEB6C40158DDF840BFCF12(L_6, _stringLiteral574AF626B2ECA36F40D5D593643BB7683F9514E2, /*hidden argument*/NULL);
+		G_B5_0 = ((int32_t)(L_7));
+		goto IL_0034;
+	}
+
+IL_0033:
+	{
+		G_B5_0 = 1;
+	}
+
+IL_0034:
+	{
+		V_3 = (bool)G_B5_0;
+		bool L_8 = V_3;
+		if (!L_8)
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		String_t* L_9 = ___ip1;
+		String_t* L_10 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&___port2), /*hidden argument*/NULL);
+		String_t* L_11 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(L_9, _stringLiteral876C4B39B6E4D0187090400768899C71D99DE90D, L_10, /*hidden argument*/NULL);
+		V_0 = L_11;
+		goto IL_0069;
+	}
+
+IL_004f:
+	{
+		String_t* L_12 = ___ip1;
+		String_t* L_13 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&___port2), /*hidden argument*/NULL);
+		String_t* L_14 = String_Concat_m37A5BF26F8F8F1892D60D727303B23FB604FEE78(_stringLiteral875CF8A46A6E3F0725287DAF52B09AF91CB77C71, L_12, _stringLiteral876C4B39B6E4D0187090400768899C71D99DE90D, L_13, /*hidden argument*/NULL);
+		V_0 = L_14;
+	}
+
+IL_0069:
+	{
+		int32_t L_15 = ___hostId0;
+		String_t* L_16 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(UNETWebSocketLib_t4A2609B11AEA48A2193815C051149652EEE7D349_il2cpp_TypeInfo_var);
+		UNETWebSocketLib_JS_UNETWebSockets_SocketCreate_mA390F21276D1075F12E24F33ED0D46C93A3E592F(L_15, L_16, /*hidden argument*/NULL);
+		uint8_t* L_17 = ___error4;
+		*((int8_t*)L_17) = (int8_t)0;
+		V_2 = 1;
+		goto IL_0079;
+	}
+
+IL_0079:
+	{
+		int32_t L_18 = V_2;
+		return L_18;
 	}
 }
 // UnityEngine.Networking.NetworkEventType UnityEngine.Networking.UNETWebSocketLib::Receive(System.Int32&,System.Int32&,System.Int32&,System.Byte[],System.Int32,System.Int32&,System.Byte&)

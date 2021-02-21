@@ -178,81 +178,85 @@ extern void Server_Start_m22151FA41E5A2827E81A9CB2C61920A7D6F8612A (void);
 extern void Server_Update_mED10059C893497EC4235F83FF1A0692A8FE68A7E (void);
 // 0x00000051 System.Void Server::.ctor()
 extern void Server__ctor_m6B8BA5160800C8C0C908BB87079C08476F6709A4 (void);
-// 0x00000052 Mirror.ErrorMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ErrorMessage(Mirror.NetworkReader)
+// 0x00000052 System.Void WebClient::Start()
+extern void WebClient_Start_m92E37D107DAE597CD6665968A59CC50A0FAE733A (void);
+// 0x00000053 System.Void WebClient::.ctor()
+extern void WebClient__ctor_m60FCABE971731D6CF7F142F4F49D6A7F90CD0CDF (void);
+// 0x00000054 Mirror.ErrorMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ErrorMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_ErrorMessage_m8A7F1680078AF95C443FFFABDF4BB63726437225 (void);
-// 0x00000053 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ErrorMessage(Mirror.NetworkWriter,Mirror.ErrorMessage)
+// 0x00000055 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ErrorMessage(Mirror.NetworkWriter,Mirror.ErrorMessage)
 extern void GeneratedNetworkCode__Write_Mirror_ErrorMessage_m5D80CC10A68818B9350AFA24544361806086FDD1 (void);
-// 0x00000054 Mirror.ReadyMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ReadyMessage(Mirror.NetworkReader)
+// 0x00000056 Mirror.ReadyMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ReadyMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_ReadyMessage_mE2B956FB18C72DB2AAF97D93CD7A1412D4A6B0BF (void);
-// 0x00000055 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ReadyMessage(Mirror.NetworkWriter,Mirror.ReadyMessage)
+// 0x00000057 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ReadyMessage(Mirror.NetworkWriter,Mirror.ReadyMessage)
 extern void GeneratedNetworkCode__Write_Mirror_ReadyMessage_mDEE6F839CBFBC4FA67F9E4AB3E00479144EFE706 (void);
-// 0x00000056 Mirror.NotReadyMessage Mirror.GeneratedNetworkCode::_Read_Mirror.NotReadyMessage(Mirror.NetworkReader)
+// 0x00000058 Mirror.NotReadyMessage Mirror.GeneratedNetworkCode::_Read_Mirror.NotReadyMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_NotReadyMessage_mC6EA3B5AED8C4F9906B2F6C0312D1498D5DAA8E0 (void);
-// 0x00000057 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.NotReadyMessage(Mirror.NetworkWriter,Mirror.NotReadyMessage)
+// 0x00000059 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.NotReadyMessage(Mirror.NetworkWriter,Mirror.NotReadyMessage)
 extern void GeneratedNetworkCode__Write_Mirror_NotReadyMessage_m6C94EAA192195ACB7BCCB7E8A5FB2083FB0C7005 (void);
-// 0x00000058 Mirror.AddPlayerMessage Mirror.GeneratedNetworkCode::_Read_Mirror.AddPlayerMessage(Mirror.NetworkReader)
+// 0x0000005A Mirror.AddPlayerMessage Mirror.GeneratedNetworkCode::_Read_Mirror.AddPlayerMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_AddPlayerMessage_m4C2E06F848D1B94DDC640AA0EFD0CA9C36721502 (void);
-// 0x00000059 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.AddPlayerMessage(Mirror.NetworkWriter,Mirror.AddPlayerMessage)
+// 0x0000005B System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.AddPlayerMessage(Mirror.NetworkWriter,Mirror.AddPlayerMessage)
 extern void GeneratedNetworkCode__Write_Mirror_AddPlayerMessage_mAF8C12F87F2F0E51FA42578D82E57D5DE3AF01B9 (void);
-// 0x0000005A Mirror.DisconnectMessage Mirror.GeneratedNetworkCode::_Read_Mirror.DisconnectMessage(Mirror.NetworkReader)
+// 0x0000005C Mirror.DisconnectMessage Mirror.GeneratedNetworkCode::_Read_Mirror.DisconnectMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_DisconnectMessage_m590A66EBCEFE4A86249504263DE3C8A9CEFC1A1F (void);
-// 0x0000005B System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.DisconnectMessage(Mirror.NetworkWriter,Mirror.DisconnectMessage)
+// 0x0000005D System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.DisconnectMessage(Mirror.NetworkWriter,Mirror.DisconnectMessage)
 extern void GeneratedNetworkCode__Write_Mirror_DisconnectMessage_mB1CA54449AEAACC9259E5E7949EE4AA31EC8833A (void);
-// 0x0000005C Mirror.ConnectMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ConnectMessage(Mirror.NetworkReader)
+// 0x0000005E Mirror.ConnectMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ConnectMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_ConnectMessage_m93BA23C93888B0D7173C2B91A9E594A1B0B9C810 (void);
-// 0x0000005D System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ConnectMessage(Mirror.NetworkWriter,Mirror.ConnectMessage)
+// 0x0000005F System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ConnectMessage(Mirror.NetworkWriter,Mirror.ConnectMessage)
 extern void GeneratedNetworkCode__Write_Mirror_ConnectMessage_mD53F8B44F1D11F3BA468ADD169F17D73737DF978 (void);
-// 0x0000005E Mirror.SceneMessage Mirror.GeneratedNetworkCode::_Read_Mirror.SceneMessage(Mirror.NetworkReader)
+// 0x00000060 Mirror.SceneMessage Mirror.GeneratedNetworkCode::_Read_Mirror.SceneMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_SceneMessage_m4B63289E3849B01FD601A21B8E29E2F1ED1119B8 (void);
-// 0x0000005F Mirror.SceneOperation Mirror.GeneratedNetworkCode::_Read_Mirror.SceneOperation(Mirror.NetworkReader)
+// 0x00000061 Mirror.SceneOperation Mirror.GeneratedNetworkCode::_Read_Mirror.SceneOperation(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_SceneOperation_m7DEB9A4BFB06C5A38C93BBAC31D4813AD99FD91D (void);
-// 0x00000060 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.SceneMessage(Mirror.NetworkWriter,Mirror.SceneMessage)
+// 0x00000062 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.SceneMessage(Mirror.NetworkWriter,Mirror.SceneMessage)
 extern void GeneratedNetworkCode__Write_Mirror_SceneMessage_mE1645ADD480391AB601EFE6065B1CDDD1E3B00C9 (void);
-// 0x00000061 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.SceneOperation(Mirror.NetworkWriter,Mirror.SceneOperation)
+// 0x00000063 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.SceneOperation(Mirror.NetworkWriter,Mirror.SceneOperation)
 extern void GeneratedNetworkCode__Write_Mirror_SceneOperation_m006CA70F6FCA7971B6FEC0A3A0EDE3D7BE1678E6 (void);
-// 0x00000062 Mirror.CommandMessage Mirror.GeneratedNetworkCode::_Read_Mirror.CommandMessage(Mirror.NetworkReader)
+// 0x00000064 Mirror.CommandMessage Mirror.GeneratedNetworkCode::_Read_Mirror.CommandMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_CommandMessage_mECC34FB337A5D4B6EB3947644B7E02B8E8B00FC0 (void);
-// 0x00000063 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.CommandMessage(Mirror.NetworkWriter,Mirror.CommandMessage)
+// 0x00000065 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.CommandMessage(Mirror.NetworkWriter,Mirror.CommandMessage)
 extern void GeneratedNetworkCode__Write_Mirror_CommandMessage_mA1685BE9E0633761FE517E4171DE64FFBDC397B1 (void);
-// 0x00000064 Mirror.RpcMessage Mirror.GeneratedNetworkCode::_Read_Mirror.RpcMessage(Mirror.NetworkReader)
+// 0x00000066 Mirror.RpcMessage Mirror.GeneratedNetworkCode::_Read_Mirror.RpcMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_RpcMessage_m4D257364102F49B28E19CFCBF861C74C71C88CF5 (void);
-// 0x00000065 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.RpcMessage(Mirror.NetworkWriter,Mirror.RpcMessage)
+// 0x00000067 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.RpcMessage(Mirror.NetworkWriter,Mirror.RpcMessage)
 extern void GeneratedNetworkCode__Write_Mirror_RpcMessage_m3CFE1651CE89811888902FBB31AB092514F79F60 (void);
-// 0x00000066 Mirror.SpawnMessage Mirror.GeneratedNetworkCode::_Read_Mirror.SpawnMessage(Mirror.NetworkReader)
+// 0x00000068 Mirror.SpawnMessage Mirror.GeneratedNetworkCode::_Read_Mirror.SpawnMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_SpawnMessage_m31EC8220FAEFB8761E8DE1103A248C7BA2DE3783 (void);
-// 0x00000067 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.SpawnMessage(Mirror.NetworkWriter,Mirror.SpawnMessage)
+// 0x00000069 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.SpawnMessage(Mirror.NetworkWriter,Mirror.SpawnMessage)
 extern void GeneratedNetworkCode__Write_Mirror_SpawnMessage_mD4D895651BE0B432E3FEB3132D0C374A30F73F9A (void);
-// 0x00000068 Mirror.ObjectSpawnStartedMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectSpawnStartedMessage(Mirror.NetworkReader)
+// 0x0000006A Mirror.ObjectSpawnStartedMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectSpawnStartedMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_ObjectSpawnStartedMessage_mFD106C9DC9281FFB5C54E9D7AE09DB9907368A91 (void);
-// 0x00000069 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectSpawnStartedMessage(Mirror.NetworkWriter,Mirror.ObjectSpawnStartedMessage)
+// 0x0000006B System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectSpawnStartedMessage(Mirror.NetworkWriter,Mirror.ObjectSpawnStartedMessage)
 extern void GeneratedNetworkCode__Write_Mirror_ObjectSpawnStartedMessage_m78BBD4AC106546B7F0A36394701C996EB561A462 (void);
-// 0x0000006A Mirror.ObjectSpawnFinishedMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectSpawnFinishedMessage(Mirror.NetworkReader)
+// 0x0000006C Mirror.ObjectSpawnFinishedMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectSpawnFinishedMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_ObjectSpawnFinishedMessage_m0B74EA49D498677A02AE9CABCD58AF792F7AA95D (void);
-// 0x0000006B System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectSpawnFinishedMessage(Mirror.NetworkWriter,Mirror.ObjectSpawnFinishedMessage)
+// 0x0000006D System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectSpawnFinishedMessage(Mirror.NetworkWriter,Mirror.ObjectSpawnFinishedMessage)
 extern void GeneratedNetworkCode__Write_Mirror_ObjectSpawnFinishedMessage_m725199CA24E68A0A89E22B5BC1D0AE903671D1A1 (void);
-// 0x0000006C Mirror.ObjectDestroyMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectDestroyMessage(Mirror.NetworkReader)
+// 0x0000006E Mirror.ObjectDestroyMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectDestroyMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_ObjectDestroyMessage_m48B7D38F474720778F7EF9BCFC37F0B067357B03 (void);
-// 0x0000006D System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectDestroyMessage(Mirror.NetworkWriter,Mirror.ObjectDestroyMessage)
+// 0x0000006F System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectDestroyMessage(Mirror.NetworkWriter,Mirror.ObjectDestroyMessage)
 extern void GeneratedNetworkCode__Write_Mirror_ObjectDestroyMessage_m843E69EF0CDF268B178138CDA80905687BAFEADA (void);
-// 0x0000006E Mirror.ObjectHideMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectHideMessage(Mirror.NetworkReader)
+// 0x00000070 Mirror.ObjectHideMessage Mirror.GeneratedNetworkCode::_Read_Mirror.ObjectHideMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_ObjectHideMessage_m0042FF82016C1FBA7250DA8ECC0BE2724CDC881A (void);
-// 0x0000006F System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectHideMessage(Mirror.NetworkWriter,Mirror.ObjectHideMessage)
+// 0x00000071 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.ObjectHideMessage(Mirror.NetworkWriter,Mirror.ObjectHideMessage)
 extern void GeneratedNetworkCode__Write_Mirror_ObjectHideMessage_m1A8003BDD951D23C981F6F7BAB6F9F1569D0425C (void);
-// 0x00000070 Mirror.UpdateVarsMessage Mirror.GeneratedNetworkCode::_Read_Mirror.UpdateVarsMessage(Mirror.NetworkReader)
+// 0x00000072 Mirror.UpdateVarsMessage Mirror.GeneratedNetworkCode::_Read_Mirror.UpdateVarsMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_UpdateVarsMessage_m6724C811B71DDE48CA81100D01CA6FF40676B261 (void);
-// 0x00000071 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.UpdateVarsMessage(Mirror.NetworkWriter,Mirror.UpdateVarsMessage)
+// 0x00000073 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.UpdateVarsMessage(Mirror.NetworkWriter,Mirror.UpdateVarsMessage)
 extern void GeneratedNetworkCode__Write_Mirror_UpdateVarsMessage_mE21DBDE7895DDD45CB9430868877CFB93E9C86FA (void);
-// 0x00000072 Mirror.NetworkPingMessage Mirror.GeneratedNetworkCode::_Read_Mirror.NetworkPingMessage(Mirror.NetworkReader)
+// 0x00000074 Mirror.NetworkPingMessage Mirror.GeneratedNetworkCode::_Read_Mirror.NetworkPingMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_NetworkPingMessage_mC2B3B4ACDDB56A809D86D120286A8173DBE447A8 (void);
-// 0x00000073 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.NetworkPingMessage(Mirror.NetworkWriter,Mirror.NetworkPingMessage)
+// 0x00000075 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.NetworkPingMessage(Mirror.NetworkWriter,Mirror.NetworkPingMessage)
 extern void GeneratedNetworkCode__Write_Mirror_NetworkPingMessage_m6D621F939E48C0B3CA2E6149D71069C358ABDF93 (void);
-// 0x00000074 Mirror.NetworkPongMessage Mirror.GeneratedNetworkCode::_Read_Mirror.NetworkPongMessage(Mirror.NetworkReader)
+// 0x00000076 Mirror.NetworkPongMessage Mirror.GeneratedNetworkCode::_Read_Mirror.NetworkPongMessage(Mirror.NetworkReader)
 extern void GeneratedNetworkCode__Read_Mirror_NetworkPongMessage_m9386EC63A77EFEC9FDDEC75BB13EAFDDDAFC81F8 (void);
-// 0x00000075 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.NetworkPongMessage(Mirror.NetworkWriter,Mirror.NetworkPongMessage)
+// 0x00000077 System.Void Mirror.GeneratedNetworkCode::_Write_Mirror.NetworkPongMessage(Mirror.NetworkWriter,Mirror.NetworkPongMessage)
 extern void GeneratedNetworkCode__Write_Mirror_NetworkPongMessage_mCAC90209C64184AED8759A6972F1E69D26DDC000 (void);
-// 0x00000076 System.Void Mirror.GeneratedNetworkCode::InitReadWriters()
+// 0x00000078 System.Void Mirror.GeneratedNetworkCode::InitReadWriters()
 extern void GeneratedNetworkCode_InitReadWriters_mF3F676E480CD76ED8819C76E79234EED4737891B (void);
-static Il2CppMethodPointer s_methodPointers[118] = 
+static Il2CppMethodPointer s_methodPointers[120] = 
 {
 	CameraFollow_Update_m9762CC5B7A2D28B7B8116BA8DE2342AFB654AB08,
 	CameraFollow_setTarget_m0FB67F6B0DD997E45A4BE17540473C66ACA245D7,
@@ -335,6 +339,8 @@ static Il2CppMethodPointer s_methodPointers[118] =
 	Server_Start_m22151FA41E5A2827E81A9CB2C61920A7D6F8612A,
 	Server_Update_mED10059C893497EC4235F83FF1A0692A8FE68A7E,
 	Server__ctor_m6B8BA5160800C8C0C908BB87079C08476F6709A4,
+	WebClient_Start_m92E37D107DAE597CD6665968A59CC50A0FAE733A,
+	WebClient__ctor_m60FCABE971731D6CF7F142F4F49D6A7F90CD0CDF,
 	GeneratedNetworkCode__Read_Mirror_ErrorMessage_m8A7F1680078AF95C443FFFABDF4BB63726437225,
 	GeneratedNetworkCode__Write_Mirror_ErrorMessage_m5D80CC10A68818B9350AFA24544361806086FDD1,
 	GeneratedNetworkCode__Read_Mirror_ReadyMessage_mE2B956FB18C72DB2AAF97D93CD7A1412D4A6B0BF,
@@ -373,7 +379,7 @@ static Il2CppMethodPointer s_methodPointers[118] =
 	GeneratedNetworkCode__Write_Mirror_NetworkPongMessage_mCAC90209C64184AED8759A6972F1E69D26DDC000,
 	GeneratedNetworkCode_InitReadWriters_mF3F676E480CD76ED8819C76E79234EED4737891B,
 };
-static const int32_t s_InvokerIndices[118] = 
+static const int32_t s_InvokerIndices[120] = 
 {
 	23,
 	26,
@@ -385,17 +391,17 @@ static const int32_t s_InvokerIndices[118] =
 	14,
 	23,
 	23,
-	1913,
 	1914,
 	1915,
 	1916,
 	1917,
+	1918,
 	9,
 	14,
 	14,
 	23,
 	23,
-	2451,
+	2454,
 	26,
 	14,
 	14,
@@ -404,11 +410,11 @@ static const int32_t s_InvokerIndices[118] =
 	23,
 	23,
 	89,
-	2452,
+	2455,
 	26,
-	2072,
-	2072,
-	2072,
+	2073,
+	2073,
+	2073,
 	23,
 	23,
 	23,
@@ -416,7 +422,7 @@ static const int32_t s_InvokerIndices[118] =
 	23,
 	23,
 	23,
-	2072,
+	2073,
 	23,
 	23,
 	23,
@@ -429,8 +435,8 @@ static const int32_t s_InvokerIndices[118] =
 	32,
 	32,
 	23,
-	2072,
-	2453,
+	2073,
+	2456,
 	23,
 	10,
 	32,
@@ -456,11 +462,12 @@ static const int32_t s_InvokerIndices[118] =
 	23,
 	23,
 	23,
-	1878,
+	23,
+	23,
 	1879,
 	1880,
-	1674,
 	1881,
+	1675,
 	1882,
 	1883,
 	1884,
@@ -469,16 +476,16 @@ static const int32_t s_InvokerIndices[118] =
 	1887,
 	1888,
 	1889,
-	114,
 	1890,
-	584,
+	114,
 	1891,
-	1675,
+	584,
 	1892,
+	1676,
 	1893,
 	1894,
-	1612,
 	1895,
+	1613,
 	1896,
 	1897,
 	1898,
@@ -489,16 +496,17 @@ static const int32_t s_InvokerIndices[118] =
 	1903,
 	1904,
 	1905,
-	1679,
 	1906,
+	1680,
 	1907,
+	1908,
 	3,
 };
 extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	118,
+	120,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,
