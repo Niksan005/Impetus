@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Mirror/Examples/Pong/Scenes/Scene.unity
     guid: 89a84548859e3b643b4fb27984dc2b0d
+  - enabled: 0
+    path: Assets/Scenes/ConnectScene.unity
+    guid: 60bf373b662c2b24699b09da8e6e2295
   m_configObjects: {}

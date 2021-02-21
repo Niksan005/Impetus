@@ -24,9 +24,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.InputActionAsset
+    - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
+    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -81,11 +84,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12714}
     - Class: 114
+      Script: {instanceID: 13088}
+    - Class: 114
       Script: {instanceID: 13254}
     - Class: 114
       Script: {instanceID: 13354}
     - Class: 114
       Script: {instanceID: 13530}
+    - Class: 114
+      Script: {instanceID: 14566}
+    - Class: 114
+      Script: {instanceID: 15152}
     - Class: 114
       Script: {instanceID: 15354}
     - Class: 114
@@ -1045,12 +1054,6 @@ ScriptsOnlyBuild:
     className: NetworkRoomManagerExt
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Test
-  - hash:
-      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1325,6 +1328,24 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
+  - hash:
+      serializedVersion: 2
+      Hash: a393e1d85ad3d56e5c48c9a58cc2d806
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Client
+  - hash:
+      serializedVersion: 2
+      Hash: 05c26a69c1fde3f08133e03cc006af91
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Server
   platform: 20
   scenePathNames:
   - Assets/Scenes/Main.unity

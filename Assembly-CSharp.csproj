@@ -56,12 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerSoZ.cs" />
-    <Compile Include="Assets\Scripts\HealthBar.cs" />
-    <Compile Include="Assets\Scripts\MouseInput.cs" />
-    <Compile Include="Assets\Scripts\MoveByMouse.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\PlayerSoZ.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\MouseInput.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\MoveByMouse.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Tom Weiland tutorial\Client.cs" />
+    <Compile Include="Assets\Scripts\Tom Weiland tutorial\UIManager.cs" />
+    <Compile Include="Assets\Scripts\WebGL Multiplayer\Server.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
