@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.Networking;
 using Mirror;
-public class MoveByMouse : NetworkBehaviour
+public class MoveByMouse : MonoBehaviour
 {
-    public Tilemap map;
     MouseInput mouseInput;
-    [SerializeReference]  private float movementSpeed;
-    private Vector3 destination;
+    [SerializeReference] private float movementSpeed;
+    public Vector3 destination;
 
     private void Awake()
     {
@@ -28,25 +27,22 @@ public class MoveByMouse : NetworkBehaviour
         destination = transform.position;
         mouseInput.Mouse.MouseClickRight.performed += _ => MouseClickRight();
     }
-    void Update()
+    void FixedUpdate()
     {
-        if (this.isLocalPlayer)
-        {
-            if (Vector3.Distance(transform.position, destination) > 0.1f)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
-            }
-        }
+        //if (Vector3.Distance(transform.position, destination) > 0.1f)
+        //{
+        //    transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
+        //}
     }
     private void MouseClickRight()
     {
         Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        //Vector3Int gridPosition = map.WorldToCell(mousePosition);
-
-        //if (map.HasTile(gridPosition))
-        //{
-            destination = mousePosition;
-        //}
+        destination = mousePosition;
+        SendInputToServer(destination);
+    }
+    private void SendInputToServer(Vector3 destination)
+    {
+        ClientSend.PlayerMovement(destination);
     }
 }

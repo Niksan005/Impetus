@@ -22,10 +22,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ConnectedToServer()
+    public void ConnectToServer()
     {
         startMenu.SetActive(false);
-        //usernameField.interactable = false;
-        Client.instance.ConnectedToServer();
+        usernameField.interactable = false;
+        Client.instance.ConnectToServer();
     }
 }

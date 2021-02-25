@@ -16,6 +16,10 @@ public class Client : MonoBehaviour
     public int port = 26950;
     public int myId = 0;
     public TCP tcp;
+    public UDP udp;
+
+    private delegate void PacketHandler(Packet packet);
+    private static Dictionary<int, PacketHandler> packetHandlers;
 
     private void Awake()
     {
@@ -32,16 +36,20 @@ public class Client : MonoBehaviour
     private void Start()
     {
         tcp = new TCP();
+        udp = new UDP();
     }
 
-    public void ConnectedToServer()
+    public void ConnectToServer()
     {
+        InitializeClientData();
         tcp.Connect();
     }
     public class TCP
     {
         public TcpClient socket;
+
         private NetworkStream stream;
+        private Packet receivedData;
         private byte[] receiveBuffer;
 
         public void Connect()
@@ -54,7 +62,10 @@ public class Client : MonoBehaviour
 
             receiveBuffer = new byte[dataBufferSize];
             socket.BeginConnect(instance.ip, instance.port, ConnectCallback, socket);
-            SceneManager.LoadScene(1);
+
+            //TODO: interact with API
+
+            //SceneManager.LoadScene(1);
         }
 
         private void ConnectCallback(IAsyncResult result)
@@ -67,6 +78,9 @@ public class Client : MonoBehaviour
             }
 
             stream = socket.GetStream();
+
+            receivedData = new Packet();
+
             stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
         }
 
@@ -84,7 +98,7 @@ public class Client : MonoBehaviour
                 byte[] _data = new byte[_byteLength];
                 Array.Copy(receiveBuffer, _data, _byteLength);
 
-                // TODO: handle data
+                receivedData.Reset(HandleData(_data));
                 stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
             }
             catch (Exception)
@@ -92,5 +106,156 @@ public class Client : MonoBehaviour
                 //TODO 
             }
         }
+
+        private bool HandleData(byte[] data)
+        {
+            int packetLenght = 0;
+
+            receivedData.SetBytes(data);
+
+            if (receivedData.UnreadLength() >= 4)
+            {
+                packetLenght = receivedData.ReadInt();
+                if (packetLenght <= 0)
+                {
+                    return true;
+                }
+            }
+
+            while (packetLenght > 0 && packetLenght <= receivedData.UnreadLength())
+            {
+                byte[] packetBytes = receivedData.ReadBytes(packetLenght);
+                ThreadManager.ExecuteOnMainThread(() =>
+                {
+                    using (Packet packet = new Packet(packetBytes))
+                    {
+                        int packetId = packet.ReadInt();
+                        packetHandlers[packetId](packet);
+                    }
+                });
+
+                packetLenght = 0;
+                if (receivedData.UnreadLength() >= 4)
+                {
+                    packetLenght = receivedData.ReadInt();
+                    if (packetLenght <= 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+            if (packetLenght <= 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void SendData(Packet packet)
+        {
+            try
+            {
+                if (socket != null)
+                {
+                    stream.BeginWrite(packet.ToArray(), 0, packet.Length(), null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.Log($"Error sending data to server via TCP: {ex}");
+            }
+        }
+    }
+
+    public class UDP
+    {
+        public UdpClient socket;
+        public IPEndPoint endPoint;
+
+        public UDP()
+        {
+            endPoint = new IPEndPoint(IPAddress.Parse(instance.ip), instance.port);
+        }
+
+        public void Connect(int localPort)
+        {
+            socket = new UdpClient(localPort);
+
+            socket.Connect(endPoint);
+            socket.BeginReceive(ReceiveCallback, null);
+
+            using (Packet packet = new Packet())
+            {
+                SendData(packet);
+            }
+        }
+
+        public void SendData(Packet packet)
+        {
+            try
+            {
+                packet.InsertInt(instance.myId);
+                if (socket != null)
+                {
+                    socket.BeginSend(packet.ToArray(), packet.Length(), null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.Log($"Error sending data to server via UDP: {ex}");
+            }
+        }
+
+        private void ReceiveCallback(IAsyncResult result)
+        {
+            try
+            {
+                byte[] data = socket.EndReceive(result, ref endPoint);
+                socket.BeginReceive(ReceiveCallback, null);
+
+                if (data.Length < 4)
+                {
+                    //TODO dissconnect
+                    return;
+                }
+
+                HandleData(data);
+            }
+            catch (Exception)
+            {
+                //TODO disconnect
+            }
+        }
+
+        private void HandleData(byte[] data)
+        {
+            using (Packet packet = new Packet(data))
+            {
+                int packetLength = packet.ReadInt();
+                data = packet.ReadBytes(packetLength);
+            };
+
+            ThreadManager.ExecuteOnMainThread(() =>
+            {
+                using (Packet packet = new Packet(data))
+                {
+                    int packetId = packet.ReadInt();
+                    packetHandlers[packetId](packet);
+                }
+            });
+        }
+    }
+
+    private void InitializeClientData()
+    {
+        packetHandlers = new Dictionary<int, PacketHandler>()
+        {
+            {(int)ServerPackets.welcome, ClientHandle.Welcome},
+            {(int)ServerPackets.spawnPlayer, ClientHandle.SpawnPlayer},
+            {(int)ServerPackets.playerPosition, ClientHandle.PlayerPosition},
+            {(int)ServerPackets.playerRotation, ClientHandle.PlayerRotation}
+        };
+
+        Debug.Log("Initialized packets.");
     }
 }
