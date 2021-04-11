@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
+//using Mirror;
 using System;
 using UnityEngine.Tilemaps;
 using System.Linq;
 
-public class PlayerSoZ : NetworkBehaviour
+public class PlayerSoZ : MonoBehaviour //NetworkBehaviour
 {
     public float damageRadius = 1.5f;
     public int maxHealth = 100;
-    [SyncVar]
+    //[SyncVar]
     public int currentHealth;
     public HealthBar healthBar;
     public MouseInput mouseInput;
@@ -36,10 +36,10 @@ public class PlayerSoZ : NetworkBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-    public override void OnStartLocalPlayer()
-    {
-        Camera.main.GetComponent<CameraFollow>().setTarget(gameObject.transform);
-    }
+    //public override void OnStartLocalPlayer()
+    //{
+    //    Camera.main.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+    //}
 
     // Update is called once per frame
     void Update()
@@ -48,33 +48,32 @@ public class PlayerSoZ : NetworkBehaviour
     }
     public void TakeDamage(int damage)
     {
-        if (isServer)
-            RpcTakeDamage(damage);
-        else
-            CmdTakeDamage(damage);
+        //if (isServer)
+        //    RpcTakeDamage(damage);
+        //else
+        //    CmdTakeDamage(damage);
+
+        RpcTakeDamage(damage);
     }
-    [Command(ignoreAuthority = true)]
+    //[Command(ignoreAuthority = true)]
     public void CmdTakeDamage(int damage)
     {
         RpcTakeDamage(damage);
     }
-    [ClientRpc]
+    //[ClientRpc]
     private void RpcTakeDamage(int damage)
     {
-        //if (this.isServer)
-        //{
         this.currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         if (this.currentHealth <= 0)
         {
             Destroy(this.gameObject);
         }
-        //}
     }
     private void DoDamage(int damage)
     {
-        if (this.isLocalPlayer)
-        {
+        //if (this.isLocalPlayer)
+        //{
             Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             Vector2 playerPosition = this.transform.position;
@@ -94,7 +93,7 @@ public class PlayerSoZ : NetworkBehaviour
                         enemy.TakeDamage(20);
                     }
                 }
-            }
+          //}
         }
     }
 }

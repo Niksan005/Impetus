@@ -60,15 +60,16 @@
     <Compile Include="Assets\Scripts\Tom Weiland tutorial\ClientSend.cs" />
     <Compile Include="Assets\Scripts\Tom Weiland tutorial\Client.cs" />
     <Compile Include="Assets\Scripts\Gameplay\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Tom Weiland tutorial\GameManager.cs" />
     <Compile Include="Assets\Scripts\Tom Weiland tutorial\UIManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MouseInput.cs" />
+    <Compile Include="Assets\Scripts\Tom Weiland tutorial\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Tom Weiland tutorial\ThreadManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\MoveByMouse.cs" />
     <Compile Include="Assets\Scripts\Tom Weiland tutorial\ClientHandle.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Tom Weiland tutorial\Packet.cs" />
-    <Compile Include="Assets\Scripts\Tom Weiland tutorial\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Tom Weiland tutorial\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Tom Weiland tutorial\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
