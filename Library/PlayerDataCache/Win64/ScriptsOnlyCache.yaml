@@ -11,16 +11,6 @@ ScriptsOnlyBuild:
     - PlayerSoZ
     - ThreadManager
     - UIManager
-    Mirror.Components.dll:
-    - Mirror.NetworkTransform
-    Mirror.dll:
-    - Mirror.NetworkIdentity
-    - Mirror.NetworkManager
-    - Mirror.NetworkManagerHUD
-    - Mirror.NetworkStartPosition
-    - kcp2k.KcpTransport
-    SimpleWebTransport.dll:
-    - Mirror.SimpleWeb.SimpleWebTransport
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -103,23 +93,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15158}
     - Class: 114
-      Script: {instanceID: 15252}
+      Script: {instanceID: 15160}
     - Class: 114
-      Script: {instanceID: 15360}
+      Script: {instanceID: 15254}
     - Class: 114
-      Script: {instanceID: 15388}
+      Script: {instanceID: 15362}
     - Class: 114
-      Script: {instanceID: 15474}
+      Script: {instanceID: 15390}
     - Class: 114
-      Script: {instanceID: 15556}
+      Script: {instanceID: 15558}
     - Class: 114
-      Script: {instanceID: 15814}
+      Script: {instanceID: 16212}
     - Class: 114
-      Script: {instanceID: 16210}
-    - Class: 114
-      Script: {instanceID: 16278}
-    - Class: 114
-      Script: {instanceID: 25320}
+      Script: {instanceID: 16280}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -170,12 +156,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11846}
     - Class: 114
-      Script: {instanceID: 11960}
-    - Class: 114
-      Script: {instanceID: 12232}
-    - Class: 114
-      Script: {instanceID: 12240}
-    - Class: 114
       Script: {instanceID: 12324}
     - Class: 114
       Script: {instanceID: 12712}
@@ -185,8 +165,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13220}
     - Class: 114
       Script: {instanceID: 13256}
-    - Class: 114
-      Script: {instanceID: 13356}
     - Class: 114
       Script: {instanceID: 13532}
     - Class: 114
@@ -200,27 +178,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15158}
     - Class: 114
-      Script: {instanceID: 15252}
+      Script: {instanceID: 15160}
     - Class: 114
-      Script: {instanceID: 15360}
+      Script: {instanceID: 15254}
     - Class: 114
-      Script: {instanceID: 15388}
+      Script: {instanceID: 15362}
     - Class: 114
-      Script: {instanceID: 15474}
+      Script: {instanceID: 15390}
     - Class: 114
-      Script: {instanceID: 15556}
+      Script: {instanceID: 15558}
     - Class: 114
-      Script: {instanceID: 15814}
+      Script: {instanceID: 16148}
     - Class: 114
-      Script: {instanceID: 16146}
+      Script: {instanceID: 16212}
     - Class: 114
-      Script: {instanceID: 16210}
-    - Class: 114
-      Script: {instanceID: 16278}
-    - Class: 114
-      Script: {instanceID: 16388}
-    - Class: 114
-      Script: {instanceID: 25320}
+      Script: {instanceID: 16280}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -538,7 +510,7 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
-      Hash: 3b30b42ea22dd733b8ee219a301fb68e
+      Hash: de822ad14d7d22295b27b4945495e6ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSoZ
@@ -838,7 +810,7 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: 05c26a69c1fde3f08133e03cc006af91
+      Hash: 83b5dddb89b27c5f870a44e600369e8b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -1168,6 +1140,12 @@ ScriptsOnlyBuild:
     className: InputActionReference
   - hash:
       serializedVersion: 2
+      Hash: 2b21fb0d200f12949d89a9c9240d393f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraController
+  - hash:
+      serializedVersion: 2
       Hash: cf95add559be53ae8bfdfcea86c5a18f
     assemblyName: Mirror.dll
     namespaceName: Mirror
@@ -1484,12 +1462,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
-  - hash:
-      serializedVersion: 2
-      Hash: 2b21fb0d200f12949d89a9c9240d393f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraController
   platform: 19
   scenePathNames:
   - Assets/Scenes/ConnectScene.unity

@@ -822,6 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMenu: {fileID: 910124975}
   usernameField: {fileID: 429749564}
+  passwordField: {fileID: 122619982}
 --- !u!114 &1117872430
 MonoBehaviour:
   m_ObjectHideFlags: 0

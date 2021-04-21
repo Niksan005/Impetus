@@ -23,6 +23,7 @@ public class ClientSend : MonoBehaviour
         {
             packet.Write(Client.instance.myId);
             packet.Write(UIManager.instance.usernameField.text);
+            packet.Write(UIManager.instance.passwordField.text);
 
             SendTCPData(packet);
         }
@@ -34,6 +35,17 @@ public class ClientSend : MonoBehaviour
         {
             packet.Write(destination);
             packet.Write(GameManager.players[Client.instance.myId].transform.rotation);
+
+            SendUDPData(packet);
+        }
+    }
+
+    public static void PlayerHit(Vector3 hitPosition, int damage)
+    {
+        using (Packet packet = new Packet((int)ClientPackets.playerHit))
+        {
+            packet.Write(hitPosition);
+            packet.Write(damage);
 
             SendUDPData(packet);
         }

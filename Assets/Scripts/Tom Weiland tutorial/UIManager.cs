@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     public GameObject startMenu;
     public InputField usernameField;
+    public InputField passwordField;
 
     private void Awake()
     {
@@ -24,8 +26,10 @@ public class UIManager : MonoBehaviour
 
     public void ConnectToServer()
     {
-        startMenu.SetActive(false);
-        usernameField.interactable = false;
-        Client.instance.ConnectToServer();
+        if (usernameField.text != null && passwordField.text != null)
+        {
+            startMenu.SetActive(false);
+            Client.instance.ConnectToServer();
+        }
     }
 }
